@@ -1,9 +1,9 @@
 # Pokemondle
 
---ATENÇÃO--
-Este projeto foi feito com intuito acadêmico e possivelmente mais tarde possa se tornar um app distribuido.
+# --ATENÇÃO--
+## Este projeto foi feito com intuito acadêmico e possivelmente mais tarde possa se tornar um app distribuido.
 
-Inicialmente temos a estrutura das telas compostas por:
+### Inicialmente temos a estrutura das telas compostas por:
 - index.js (sendo a primeira tela, a tela inicial)
 - selecao.js (Tela referente a seleção de gerações que serão selecionadas para o jogo)
 - help.js (Tela de ajuda e explicação de como funciona o jogo/projeto)
@@ -11,9 +11,9 @@ Inicialmente temos a estrutura das telas compostas por:
 
 as conexões das telas estão entre:
 
-help.js <-> index.js <-> selecao.js <-> play.js
+## help.js <-> index.js <-> selecao.js <-> play.js
 
--- Instruções para execução --
+# -- Instruções para execução --
 
 para iniciar o projeto digite:
 ou
@@ -30,22 +30,22 @@ será gerado um codeQr onde baixando no celular o aplicativo
 Expo Go
 https://play.google.com/store/apps/details?id=host.exp.exponent&pcampaignid=web_share
 
--- Dependências --
+# -- Dependências --
 
-Criação do package.json
+## Criação do package.json
 `npm init -y`
 
-Importações:
+## Importações:
 `npm install @expo/vector-icons @react-native-community/blur @react-navigation/bottom-tabs @react-navigation/native expo expo-blur expo-constants expo-font expo-haptics expo-linking expo-router expo-splash-screen expo-status-bar expo-symbols expo-system-ui expo-web-browser react react-dom react-native react-native-gesture-handler react-native-reanimated react-native-restart react-native-safe-area-context react-native-screens react-native-web react-native-webview`
 
--- Modelo de estrutura: --
+# -- Modelo de estrutura: --
 Para todas as páginas foi adicionado uma mesma imagem de fundo e para a index e help foram adicionadas a logo Pokemon (Todos os direitos reservados a Pokemon Company)
 
--- Estrutura index.js: --
+# -- Estrutura index.js: --
 Formado por um estrutura de flex com dois botões sendo a principal estrutura, sua principal função é dar um tema direito para o usuáro. Sendo assim o botão Jogar/Play sendo o botão para dar início ao jogo e o botão como jogar servindo como uma explicação melhor para o propósito do jogo
 as estruturas usadas para direcional da página contam com botões de TouchableOpacity dentro Link a qual serve como redirecionamento.
 
--- Estrutura selecao.js: --
+# -- Estrutura selecao.js: --
 - A estrutura da selecao está com algumas funcionalidades a mais e diferenciais de conexão devido a 
 necessidade de passar parâmetros para a tela que fará a requisição para a API. A parte de css está simples, é uma View no centro com uma lista flex de gerações com radio.
 
@@ -59,10 +59,10 @@ necessidade de passar parâmetros para a tela que fará a requisição para a AP
 
 - Para evitar erros e problemas com path e etc foi adicionado uma variável chamada valorzinho que quando é detectado na verificação de forEach do array com false e true toda vez que for visto um true é add 1 a variável, se no final não tiver acima de 0 signfica que todo array é false (ou seja, o usuário não apertou em nenhum radio) e uma mensagem dizendo para selecionar no minimo uma função é acionada.
 
--- Estrutura help.js: --
+# -- Estrutura help.js: --
 A estrutura do help está completamente simples, possuindo necessariamente uma view central com textos explicativos, nenhuma função em geral. Unica "função" em si seria o botão de voltar com Link a qual está nas outras demais telas.
 
--- Estrutura play.js: --
+# -- Estrutura play.js: --
 - A estrutura mais complexa e grande do aplicatvo, tentarei ser breve sobre sua explição pois são muitas chamdas de variáveis e funções devido a quantidade de tratamento de dados diversos que são usados.
 
 - De inicio temos as chamadas de variáveis que serão usadas para passar valores com useState seguindo da mesma forma que a selecao (também foi chamado alguns arrays e route)
